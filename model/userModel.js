@@ -7,8 +7,8 @@ const validator = require("email-validator");
 
 mongoose.connect(DB_LINK).then(function () {
         console.log("Connected to db 4")
-    }).catch(function (error) {
-        console.log("err", error);
+    }).catch(function (err) {
+        console.log("err", err);
     })
 //mongoose -> data -> exact -> data -> that is required to form an entity 
 //  data completness , data validation
