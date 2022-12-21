@@ -40,7 +40,7 @@ app.use('/api/auth', authRouter);
 app.use('/api/review', reviewRouter);
 app.use('/api/booking', bookingRouter);
 // heroku physical -> multiple server run
-app.listen(8020, function () {
+app.listen(process.env.PORT || 8020, function () {
     console.log("server started");
 })
 // 404 page
