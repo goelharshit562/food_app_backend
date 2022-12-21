@@ -1,13 +1,10 @@
 const mongoose = require("mongoose");
-
-const validator = require("email-validator");
 let {DB_LINK} = require("../secrets")
 
-mongoose
-    .connect(DB_LINK)
-    .then(function () {
-        console.log("Connected to db 4")
+const validator = require("email-validator");
 
+mongoose.connect(DB_LINK).then(function () {
+        console.log("Connected to db 4")
     }).catch(function (error) {
         console.log("err", error);
     })
