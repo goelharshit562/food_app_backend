@@ -1,9 +1,8 @@
 const mongoose = require("mongoose");
+const validator = require("email-validator");
 let {PASSWORD} = process.env
 
 let DB_LINK = `mongodb+srv://admin:${PASSWORD}@cluster0.3gwfq.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`;
-
-const validator = require("email-validator");
 
 mongoose.connect(DB_LINK).then(function () {
         console.log("Connected to db 4")

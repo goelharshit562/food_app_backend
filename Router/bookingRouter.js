@@ -14,7 +14,14 @@ const getbookings = getElements(bookingModel);
 const Razorpay = require("razorpay");
 // let KEY_ID = process.env.KEY_ID 
 // let KEY_SECRET = process.env.KEY_SECRET
-let {KEY_ID, KEY_SECRET} = process.env || require("../secrets")
+if (process.env.KEY_ID & process.env.KEY_SECRET){
+    KEY_ID = prcoes.env.KEY_ID
+    KEY_SECRET = prcoes.env.KEY_SECRET
+}else{
+    KEY_ID = require("../secrets")
+    KEY_SECRET = require("../secrets")
+}
+// let {KEY_ID, KEY_SECRET} = require("../secrets")
 var razorpay = new Razorpay({
     key_id: KEY_ID,
     key_secret: KEY_SECRET,
